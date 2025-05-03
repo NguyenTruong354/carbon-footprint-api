@@ -193,8 +193,11 @@ class ActivityService {
     
     switch (activityType) {
       case 'transport':
-        if (!details.distance || !details.vehicle) {
-          throw new BadRequestError('Transport details must include distance and vehicle');
+        if (!details.distance) {
+          throw new BadRequestError('Transport details must include distance');
+        }
+        if (!details.vehicle_model_id) {
+          throw new BadRequestError('Transport details must include vehicle_model_id');
         }
         break;
         

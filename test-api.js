@@ -12,7 +12,7 @@ const testLogin = async () => {
     console.log('1. Testing login endpoint...');
     const response = await axios.post(`${API_URL}/auth/login`, {
       username: 'admin',
-      password: 'password'
+      password: '123'
     });
     
     token = response.data.data.token;
@@ -109,7 +109,7 @@ const testEstimateEmissions = async () => {
   try {
     console.log('\n5. Testing estimate emissions endpoint...');
     
-    const details = JSON.stringify({ distance: 10, vehicle: 'motorbike' });
+    const details = JSON.stringify({ distance: 10, vehicle: 'car' });
     const response = await axios.get(
       `${API_URL}/activities/estimate?activity_type=transport&details=${details}`,
       {

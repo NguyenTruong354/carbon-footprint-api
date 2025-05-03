@@ -8,6 +8,6 @@ module.exports = {
   DB_NAME: process.env.DB_NAME || 'carbon_footprint_db',
   JWT_SECRET: process.env.JWT_SECRET || 'your_jwt_secret',
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '24h',
-  CLIMATIQ_API_KEY: process.env.CLIMATIQ_API_KEY,
+  CLIMATIQ_API_KEY: process.env.CLIMATIQ_API_KEY,CARBON_INTERFACE_API_KEY: process.env.CARBON_INTERFACE_API_KEY,  
   CARBON_INTENSITY_API_URL: process.env.CARBON_INTENSITY_API_URL || 'https://api.carbonintensity.org.uk'
 };
